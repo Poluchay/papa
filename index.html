@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>SHEBBY</title>
+  <!-- Form Styler -->
+  <link rel="stylesheet" href="css/jquery.formstyler.css">
+  <!-- Bx Slider -->
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <!-- Main styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div id="header-wrp" class="parallax-window wrp" data-parallax="scroll" data-image-src="images/header-bg.png">
+    <div class="header wrapper-800">
+      <div class="menu-wrp wrapper-800">
+        <ul class="menu">
+          <li><a class="topLink" href="#wed-peeps-wrp">Это мы</a></li>
+          <li><a class="topLink" href="#ceremony-wrp">Где и когда</a></li>
+          <li><a class="topLink" href="#inviting-wrp">Приглашение</a></li>
+          <li><a class="topLink" href="#quest-wrp">Опрос</a></li>
+          <li><a class="topLink" href="#gallery-wrp">Галерея</a></li>
+          <li><a class="topLink" href="#instagram-wrp">Инстаграм</a></li>
+          <li><a class="topLink" href="#map-wrp">Как добраться</a></li>
+        </ul>
+      </div>
+      <h1>Eлена и Роман</h1>
+      <img class="header-birds" src="images/header-logo.png">
+      <div class="header-wed">
+        <p class="header-wed1">Мы женимся</p>
+        <p class="header-wed2">07.01.2018</p>
+      </div>
+    </div>
+  </div>
+  <!-- *HEADER* -->
+  <!-- WED PEEPS -->
+  <div id="wed-peeps-wrp" class="wrp">
+    <div class="wed-peeps wrapper-800">
+      <div class="menu-wrp brown wrapper-800">
+        <ul class="menu">
+          <li><a class="topLink" href="#wed-peeps-wrp">Это мы</a></li>
+          <li><a class="topLink" href="#ceremony-wrp">Где и когда</a></li>
+          <li><a class="topLink" href="#inviting-wrp">Приглашение</a></li>
+          <li><a class="topLink" href="#quest-wrp">Опрос</a></li>
+          <li><a class="topLink" href="#gallery-wrp">Галерея</a></li>
+          <li><a class="topLink" href="#instagram-wrp">Инстаграм</a></li>
+          <li><a class="topLink" href="#map-wrp">Как добраться</a></li>
+        </ul>
+      </div>
+      <div class="peeps-wrp wrapper-800">
+        <div class="peeps wrapper-800 clear">
+          <div class="peep">
+            <img src="images/peep1.png" alt="Eлена" />
+            <div class="name">Eлена</div>
+          </div>
+          <div class="peep">
+            <img src="images/peep2.png" alt="Роман" />
+            <div class="name">Роман</div>
+          </div>
+        </div>
+      </div>
+      <div class="counter-wrp wrapper-800">
+        <div class="counter">
+          <div class="info">Мы станем семьей 7 апреля 2018 года</div>
+          <div class="cnt-wrp">
+            <div id="cnt" class="cnt">
+              <div id="cnt-months" class="cnt-figures months">
+                <div class="figure">00</div>
+                <div class="name">месяцев</div>
+                <canvas id="cnt-canv-months" class="cnt-canvas" width="105" height="105"></canvas>
+              </div>
+              <div id="cnt-days" class="cnt-figures days">
+                <div class="figure">00</div>
+                <div class="name">дней</div>
+                <canvas id="cnt-canv-days" class="cnt-canvas" width="105" height="105"></canvas>
+              </div>
+              <div id="cnt-hours" class="cnt-figures hours">
+                <div class="figure">00</div>
+                <div class="name">часов</div>
+                <canvas id="cnt-canv-hours" class="cnt-canvas" width="105" height="105"></canvas>
+              </div>
+              <div id="cnt-minutes" class="cnt-figures minutes">
+                <div class="figure">00</div>
+                <div class="name">минут</div>
+                <canvas id="cnt-canv-minutes" class="cnt-canvas" width="105" height="105"></canvas>
+              </div>
+              <div id="cnt-seconds" class="cnt-figures seconds">
+                <div class="figure">00</div>
+                <div class="name">секунд</div>
+                <canvas id="cnt-canv-seconds" class="cnt-canvas" width="105" height="105"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- *WED PEEPS* -->
+  <!-- HISTORY -->
+  <div id="history-wrp" class="wrp">
+    <div class="history wrapper-800">
+      <div class="menu-wrp brown wrapper-800">
+        <ul class="menu">
+          <li><a class="topLink" href="#wed-peeps-wrp">Это мы</a></li>
+          <li><a class="topLink" href="#ceremony-wrp">Где и когда</a></li>
+          <li><a class="topLink" href="#inviting-wrp">Приглашение</a></li>
+          <li><a class="topLink" href="#quest-wrp">Опрос</a></li>
+          <li><a class="topLink" href="#gallery-wrp">Галерея</a></li>
+          <li><a class="topLink" href="#instagram-wrp">Инстаграм</a></li>
+          <li><a class="topLink" href="#map-wrp">Как добраться</a></li>
+        </ul>
+      </div>
+      <div class="title-wrp">Наша история</div>
+      <img src="images/history-heart.png" class="history-heart" />
+      <div class="history-list">
+        <div class="history-el clear">
+          <div class="date">
+            <div class="day">25</div>
+            <div class="month-year">декабря 2014</div>
+          </div>
+          <div class="info">
+            <div class="title">Знакомство</div>
+            <div class="text">Мы познакомились на вечеринке по случаю Новогоднего корпоратива. Мы много пили, пели и
+              смеялись - весь вечер не расставались друг с другом. Через пару дней переписки мы решили отметить вместе
+              Новый год.</div>
+          </div>
+        </div>
+        <div class="history-el clear">
+          <div class="date">
+            <div class="day">31</div>
+            <div class="month-year">декабря 2014</div>
+          </div>
+          <div class="info">
+            <div class="title">Начало отношений</div>
+            <div class="text">В этом плане нам очень удобно: не нужно запоминать нашу дату, так как все произошло на
+              Новый год :)</div>
+          </div>
+        </div>
+        <div class="history-el clear">
+          <div class="date">
+            <div class="day">7-20</div>
+            <div class="month-year">июня 2016</div>
+          </div>
+          <div class="info">
+            <div class="title">Первое путешествие</div>
+            <div class="text">Мы очень долго мечтали куда-то выбраться вдвоем, и вот наконец это слчилось. У нас была
+              незабываемая поездка в Венецию, где было сделано предложение руки и сердца :)</div>
+          </div>
+        </div>
+        <div class="history-el clear">
+          <div class="date">
+            <div class="day">18</div>
+            <div class="month-year">июня 2016</div>
+          </div>
+          <div class="info">
+            <div class="title">Предложение</div>
+            <div class="text">Рома заказал большую гондолу с музыкой и небольшим ужином. Через некоторое время я
+              заметила, что Рома очень нервничает, его щеки стали красными. Потом я увидела, как он достал небольшую
+              коробочку из кармана...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- *HISTORY* -->
+  <!-- *CEREMONY* -->
+  <div id="ceremony-wrp" class="wrp">
+    <div class="ceremony wrapper-800">
+      <div class="menu-wrp brown wrapper-800">
+        <ul class="menu">
+          <li><a class="topLink" href="#wed-peeps-wrp">Это мы</a></li>
+          <li><a class="topLink" href="#ceremony-wrp">Где и когда</a></li>
+          <li><a class="topLink" href="#inviting-wrp">Приглашение</a></li>
+          <li><a class="topLink" href="#quest-wrp">Опрос</a></li>
+          <li><a class="topLink" href="#gallery-wrp">Галерея</a></li>
+          <li><a class="topLink" href="#instagram-wrp">Инстаграм</a></li>
+          <li><a class="topLink" href="#map-wrp">Как добраться</a></li>
+        </ul>
+      </div>
+      <div class="title-wrp">Где и когда?</div>
+      <div class="ceremony-list">
+        <div class="ceremony-el">
+          <div class="ceremony-img"><img src="images/ceremony-photo1.png" /></div>
+          <div class="ceremony-icon-wrp">
+            <div class="ceremony-icon"></div>
+          </div>
+          <div class="ceremony-info">
+            <div class="title">Церемония</div>
+            <div class="text">Четверг / 7 апреля / 10:00<br />
+              Дворец Бракосочетания, Золотой зал<br />(Тюмень, ул. Малыгина 22)</div>
+          </div>
+        </div>
+        <div class="ceremony-el party-el">
+          <div class="ceremony-img"><img src="images/ceremony-photo2.png" /></div>
+          <div class="ceremony-icon-wrp">
+            <div class="ceremony-icon"></div>
+          </div>
+          <div class="ceremony-info">
+            <div class="title">Вечеринка</div>
+            <div class="text">Четверг / 7 апреля 2017 / 16:00<br />
+              Ресторан «ЧAIKA»<br />(Тюмень, ул. Республики, 60)</div>
+          </div>
+        </div>
+      </div>
+      <div class="ceremony-link"><a class="topLink" href="#map-wrp">Как добраться>></a></div>
+      <img src="images/history-heart.png" class="ceremony-heart">
+    </div>
+  </div>
+  <!-- *CEREMONY* -->
+  <!-- INVITING -->
+  <div id="inviting-wrp" class="parallax-window wrp" data-parallax="scroll" data-image-src="images/inviting-bg.png">
+    <div class="inviting wrapper-800">
+      <div class="menu-wrp brown-light wrapper-800">
+        <ul class="menu">
+          <li><a class="topLink" href="#wed-peeps-wrp">Это мы</a></li>
+          <li><a class="topLink" href="#ceremony-wrp">Где и когда</a></li>
+          <li><a class="topLink" href="#inviting-wrp">Приглашение</a></li>
+          <li><a class="topLink" href="#quest-wrp">Опрос</a></li>
+          <li><a class="topLink" href="#gallery-wrp">Галерея</a></li>
+          <li><a class="topLink" href="#instagram-wrp">Инстаграм</a></li>
+          <li><a class="topLink" href="#map-wrp">Как добраться</a></li>
+        </ul>
+      </div>
+      <div class="inviting-letter wrapper-800">
+        <div class="title">Приглашение</div>
+        <div class="inviting-text">
+          <p>15 декабря 2017 года может пройти как обычный день <br />и не запомниться Вам ничем особенным… <br />А
+            может стать одним из самых приятных дней не только для нас, но и для Вас!<br />Очень ждём Вас на нашем
+            счастливом празднике - нашей свадьбе!</p>
+          <p>Регистрация состоится во Дворце бракосочетания<br />в 12 часов по адресу: г. Тюмень, ул. Малыгина,
+            д.72,<br />торжество будет проходить в ресторане «Чайка»<br />в 17 часов по адресу: г. Тюмень, ул.
+            Республики, д.47</p>
+          <p>Просим Вас сообщить о Вашем согласии или отказе до 1 декабря <br />по телефону 8(898) 567-4128 (наш
+            организатор Виктория) <br />или заполнить форму ниже</p>
+        </div>
+        <form action="/" id="inviting-form" class="clear wrapper-800">
+          <div class="form-blocks left-block clear">
+            <label>Конечно мы придем<input type="radio" name="inv" value="Y"></label>
+            <label>К сожалению, не придем<input type="radio" name="inv" value="N"></label>
+          </div>
+          <div class="form-blocks right-block clear">
+            <label><input type="text" name="phone" class="form-phone" placeholder="номер телефона или e-mail"></label>
+            <label><input type="submit" name="submit" value="Подтвердить" class="form-submit"></label>
+          </div>
+        </form>
+        <img src="images/form-birds.png" class="form-birds">
+      </div>
+    </div>
+  </div>
+  <!-- *INVITING* -->
+  <!-- QUEST -->
+  <div id="quest-wrp" class="wrp">
+    <div class="quest wrapper-800">
+      <div class="menu-wrp brown wrapper-800">
+        <ul class="menu">
+          <li><a class="topLink" href="#wed-peeps-wrp">Это мы</a></li>
+          <li><a class="topLink" href="#ceremony-wrp">Где и когда</a></li>
+          <li><a class="topLink" href="#inviting-wrp">Приглашение</a></li>
+          <li><a class="topLink" href="#quest-wrp">Опрос</a></li>
+          <li><a class="topLink" href="#gallery-wrp">Галерея</a></li>
+          <li><a class="topLink" href="#instagram-wrp">Инстаграм</a></li>
+          <li><a class="topLink" href="#map-wrp">Как добраться</a></li>
+        </ul>
+      </div>
+      <div class="title-wrp wrapper-800">Опрос</div>
+      <div class="text">Для того, чтобы все прошло идеально, и этот день запомнился надолго<br>не только нам, но и вам,
+        пожалуйста, ответьте на несколько вопросов</div>
+      <form action="/" id="quest-form" class="clear wrapper-800">
+        <div class="form-block-left form-blocks">
+          <div class="quests quest-1">
+            <div class="quest-name">Нужен ли вам трансфер?</div>
+            <div class="input">
+              <label><input type="radio" name="transfer" value="Y">да</label>
+              <label><input type="radio" name="transfer" value="N">нет</label>
+            </div>
+          </div>
+          <div class="quests quest-2">
+            <div class="quest-name">Какая еда предпочтительна?</div>
+            <div class="input">
+              <label><input type="checkbox" name="food" value="meat">мясо</label>
+              <label><input type="checkbox" name="food" value="fish">рыба</label>
+              <label><input type="checkbox" name="food" value="bird">птица</label>
+              <label><input type="checkbox" name="food" value="vegetable">овощи</label>
+              <label class="other"><input type="checkbox" name="food" value="other">свой вариант</label><label
+                class="other-text"><input type="text" name="other-food"></label>
+            </div>
+          </div>
+          <div class="quests quest-3 clear">
+            <label class="form-phone"><input type="text" name="form-phone" placeholder="телефон или e-mail"></label>
+          </div>
+        </div>
+        <div class="form-block-right form-blocks">
+          <div class="quests quest-4">
+            <div class="quest-name">Выбираем плейлист :) Какая мзыка вам нравится?</div>
+            <div class="input">
+              <label><input type="checkbox" name="music" value="pop">поп</label>
+              <label><input type="checkbox" name="music" value="rock">рок</label>
+              <label><input type="checkbox" name="music" value="jazz">джаз</label>
+              <label><input type="checkbox" name="music" value="retro">ретро</label>
+            </div>
+          </div>
+          <div class="quests quest-5">
+            <div class="quest-name">Что будете пить?</div>
+            <div class="input">
+              <label><input type="checkbox" name="drink" value="wine">вино</label>
+              <label><input type="checkbox" name="drink" value="koniak">коньяк</label>
+              <label><input type="checkbox" name="drink" value="viski">виски</label>
+              <label><input type="checkbox" name="drink" value="vodka">водка</label>
+              <label><input type="checkbox" name="drink" value="ba">б/а</label>
+              <label class="other"><input type="checkbox" name="drink" value="other">свой вариант</label><label
+                class="other-text"><input type="text" name="other-drink"></label>
+            </div>
+          </div>
+          <div class="quests quest-6 clear">
+            <input class="quest-form-submit" type="submit" name="submit" value="Подтвердить">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- *QUEST* -->
+  <!-- GALLERY -->
+  <div id="gallery-wrp" class="wrp">
+    <div class="gallery wrapper-980">
+      <div class="menu-wrp wrapper-800">
+        <ul class="menu">
+          <li><a class="topLink" href="#wed-peeps-wrp">Это мы</a></li>
+          <li><a class="topLink" href="#ceremony-wrp">Где и когда</a></li>
+          <li><a class="topLink" href="#inviting-wrp">Приглашение</a></li>
+          <li><a class="topLink" href="#quest-wrp">Опрос</a></li>
+          <li><a class="topLink" href="#gallery-wrp">Галерея</a></li>
+          <li><a class="topLink" href="#instagram-wrp">Инстаграм</a></li>
+          <li><a class="topLink" href="#map-wrp">Как добраться</a></li>
+        </ul>
+      </div>
+      <div class="title-wrp white wrapper-800">Галерея</div>
+      <div class="gallery-slider-wrp wrapper-980">
+        <div class="gallery-slider">
+          <div class="slide-el"><img src="images/slide1.png"></div>
+          <div class="slide-el"><img src="images/slide1.png"></div>
+          <div class="slide-el"><img src="images/slide1.png"></div>
+          <div class="slide-el"><img src="images/slide1.png"></div>
+        </div>
+        <div class="gallery-prev gallery-button"></div>
+        <div class="gallery-next gallery-button"></div>
+        <div class="gallery-shadow"></div>
+        <div class="gallery-bird">
+          <img src="images/gallery-bird.png">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- *GALLERY* -->
+  <!-- INSTAGRAM -->
+  <div id="instagram-wrp" class="wrp">
+    <div class="instagram wrapper-980">
+      <div class="menu-wrp brown wrapper-800">
+        <ul class="menu">
+          <li><a class="topLink" href="#wed-peeps-wrp">Это мы</a></li>
+          <li><a class="topLink" href="#ceremony-wrp">Где и когда</a></li>
+          <li><a class="topLink" href="#inviting-wrp">Приглашение</a></li>
+          <li><a class="topLink" href="#quest-wrp">Опрос</a></li>
+          <li><a class="topLink" href="#gallery-wrp">Галерея</a></li>
+          <li><a class="topLink" href="#instagram-wrp">Инстаграм</a></li>
+          <li><a class="topLink" href="#map-wrp">Как добраться</a></li>
+        </ul>
+      </div>
+      <div class="title-wrp wrapper-800">Инстаграм</div>
+      <div class="inst-logo center">
+        <img src="images/inst-logo.png">
+      </div>
+      <div class="text center">Фотографии со свадьбы можно будет найти в Instagram по хештегу
+        <span>#свадьбаОвечкиных72</span>
+        Фотографируйтесь и выкладывайте свои снимки!
+      </div>
+      <div class="inst-gallery wrapper-800">
+        <div class="inst-el"><img src="images/inst1.png"></div>
+        <div class="inst-el"><img src="images/inst2.png"></div>
+        <div class="inst-el"><img src="images/inst3.png"></div>
+        <div class="inst-el"><img src="images/inst4.png"></div>
+        <div class="inst-el"><img src="images/inst5.png"></div>
+        <div class="inst-el"><img src="images/inst6.png"></div>
+        <div class="inst-el"><img src="images/inst7.png"></div>
+        <div class="inst-el"><img src="images/inst8.png"></div>
+        <div class="inst-el"><img src="images/inst2.png"></div>
+        <div class="inst-el"><img src="images/inst3.png"></div>
+      </div>
+    </div>
+  </div>
+  <!-- *INSTAGRAM* -->
+  <!-- MAP -->
+  <div id="map-wrp" class="wrp">
+    <div class="map wrapper-980">
+      <div class="menu-wrp brown wrapper-800">
+        <ul class="menu">
+          <li><a class="topLink" href="#wed-peeps-wrp">Это мы</a></li>
+          <li><a class="topLink" href="#ceremony-wrp">Где и когда</a></li>
+          <li><a class="topLink" href="#inviting-wrp">Приглашение</a></li>
+          <li><a class="topLink" href="#quest-wrp">Опрос</a></li>
+          <li><a class="topLink" href="#gallery-wrp">Галерея</a></li>
+          <li><a class="topLink" href="#instagram-wrp">Инстаграм</a></li>
+          <li><a class="topLink" href="#map-wrp">Как добраться</a></li>
+        </ul>
+      </div>
+      <div class="map-birds center"><img src="images/map-birds.png"></div>
+      <div class="title-wrp wrapper-800">Как добраться</div>
+      <div class="map-wrapper wr">
+        <div id="map">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MAP -->
+  <!-- FOOTER -->
+  <footer id="footer-wrp">
+    <div class="footer center">
+      <a href="https://it-wedding.com/">
+        <img src="images/dev.png">
+      </a>
+    </div>
+  </footer>
+  <!-- *FOOTER* -->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+  <!-- Parallax -->
+  <script type="text/javascript" src="js/parallax.js"></script>
+  <!-- Counter -->
+  <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+  <!-- Form Styler -->
+  <script type="text/javascript" src="js/jquery.formstyler.min.js"></script>
+  <!-- Bx Slider -->
+  <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+  <!-- Smooth Scroll -->
+  <script type="text/javascript" src="js/smooth-scroll.js"></script>
+
+  <!-- Main scripts -->
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
