@@ -1,0 +1,30 @@
+.bg-full-block img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.main-title {
+  font-size: 52px;
+}
+.main-title_black-theme {
+  color: rgba(var(--color-foreground));
+}
+
+.article-main {
+  letter-spacing: 0.06rem;
+}
+.article-main h2, .article-main h3, .article-main h4 {
+  font-size: 40px;
+}
+.article-main h2:not(:last-child), .article-main h3:not(:last-child), .article-main h4:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+.article-main p {
+  line-height: calc(1 + 0.8 / var(--font-body-scale));
+}
+.article-main p:not(:last-child) {
+  margin-bottom: 1.2rem;
+}/*# sourceMappingURL=ui.css.map */
