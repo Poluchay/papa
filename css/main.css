@@ -276,6 +276,23 @@ a {
 .article-main p:not(:last-child) {
   margin-bottom: 1.2rem;
 }
+@media (max-width: 991.98px) {
+  .article-main {
+    letter-spacing: 0.04rem;
+  }
+  .article-main h2, .article-main h3, .article-main h4 {
+    font-size: 30px;
+  }
+  .article-main h2:not(:last-child), .article-main h3:not(:last-child), .article-main h4:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
+  .article-main p {
+    line-height: calc(1 + 0.8 / var(--font-body-scale));
+  }
+  .article-main p:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
+}
 
 .header {
   position: fixed;
@@ -311,6 +328,11 @@ a {
 }
 .header_nav:not(:last-child) {
   margin-right: 15px;
+}
+@media (max-width: 991.98px) {
+  .header_nav {
+    display: none;
+  }
 }
 .header_list {
   display: -webkit-box;
@@ -411,11 +433,18 @@ a {
 .heroes_text:not(:last-child) {
   margin-bottom: 15px;
 }
-.in-marvel_cells:nth-child(2n) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+@media (min-width: 991.98px) {
+  .in-marvel_cells:nth-child(2n) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 991.98px) {
+  .in-marvel_cells:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .cells {
@@ -426,10 +455,24 @@ a {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 991.98px) {
+  .cells {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
 .cells_item {
   padding: 10px 40px 10px 40px;
 }
+@media (max-width: 991.98px) {
+  .cells_item {
+    padding: 0;
+  }
+}
 .cells_item--img {
+  width: 100%;
   -webkit-box-flex: 0;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
@@ -437,4 +480,9 @@ a {
 }
 .cells_item--img img {
   border-radius: 6px;
+}
+@media (max-width: 991.98px) {
+  .cells_item--img:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }/*# sourceMappingURL=main.css.map */
