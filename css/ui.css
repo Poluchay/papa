@@ -27,4 +27,7 @@
 }
 .article-main p:not(:last-child) {
   margin-bottom: 1.2rem;
+}
+.article-main form:not(:last-child) {
+  margin-bottom: 1.2rem;
 }/*# sourceMappingURL=ui.css.map */
