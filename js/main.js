@@ -11048,11 +11048,51 @@ document.addEventListener("DOMContentLoaded", () => {
     effect: 'fade',
     // If we need pagination
     pagination: {
-      el: '.slider_pagination',
+      el: '.slider_wrapper',
       clickable: true,
       type: 'custom',
-      bulletClass: 'slider_pagination-block'
+      bulletClass: 'slider_pagination-slide'
     }
+  });
+  //  const swiper1 = new Swiper('.slider-pagination', {
+  //    // Optional parameters
+  //    loop: true,
+
+  //  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+      let swiper;
+      breakpoint = window.matchMedia(breakpoint);
+      const enableSwiper = function (className, settings) {
+        swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](className, settings);
+        if (callback) {
+          callback(swiper);
+        }
+      };
+      const checker = function () {
+        if (breakpoint.matches) {
+          return enableSwiper(swiperClass, swiperSettings);
+        } else {
+          if (swiper !== undefined) swiper.destroy(true, true);
+          return;
+        }
+      };
+      breakpoint.addEventListener('change', checker);
+      checker();
+    };
+    const someFunc = instance => {
+      if (instance) {
+        instance.on('slideChange', function (e) {
+          console.log('*** mySwiper.activeIndex', instance.activeIndex);
+        });
+      }
+    };
+    resizableSwiper('(max-width: 992px)', '.slider_pagination', {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4
+    }, someFunc);
   });
   window.addEventListener('scroll', scroll_scroll);
   function scroll_scroll(e) {
