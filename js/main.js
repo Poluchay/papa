@@ -11089,9 +11089,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
     resizableSwiper('(max-width: 992px)', '.slider_pagination', {
-      loop: true,
+      loop: false,
       spaceBetween: 10,
-      slidesPerView: 4
+      slidesPerView: 3.5
     }, someFunc);
   });
   window.addEventListener('scroll', scroll_scroll);
