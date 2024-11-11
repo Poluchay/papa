@@ -15,8 +15,8 @@
 </head>
 
 <body class="page__body">
-  <div class="site-container">
-    <header class="header">
+  <div class="site-container" id="top">
+    <header class="header" data-scroll-header>
   <div class="container">
     <div class="header_line">
       <div class="header_logo">
@@ -30,7 +30,7 @@
       <nav class="header_nav">
         <ul class="header_list">
           <li class="header_list-item">
-            <a href="#" class="header_list-link">The Car Bar</a>
+            <a href="#block-1" class="header_list-link">The Car Bar</a>
           </li>
           <li class="header_list-item">
             <a href="#" class="header_list-link">Merch</a>
@@ -68,7 +68,7 @@
               <p>The Car Bar The Car Bar</p>
             </div>
             <div class="heroes_button">
-              <a href="#" class="main-button main-button--white">
+              <a href="#block-1" class="main-button main-button--white">
                 Learn more
               </a>
             </div>
@@ -76,7 +76,7 @@
         </div>
       </section>
       <div class="main_wrapper">
-        <section class="main_section in-marvel">
+        <section class="main_section in-marvel" id="block-1">
           <div class="in-marvel_body container">
             <div class="in-marvel_cells cells">
               <div class="cells_item cells_item--slider">
@@ -192,15 +192,15 @@
                     <p>Ditch those burly camping tables and fiddly chairs for those quick pit stops and trips! Embrace the ease of The Car Bar, designed to be as quick and easy as possible to set up and take down.</p>
                     <div class="spollers" data-spollers>
                       <div class="spollers_item">
-                        <div class="spollers_title" data-spoller>
-                          Have a question? <span class="icon-credit-card"></span>
+                        <div class="spollers_title icon-cheveron-down" data-spoller>
+                          Have a question? Have a question? Have a question? Have a question? Have a question? Have a question? Have a question?
                         </div>
                         <div class="spollers_content">
                           spoller-on
                         </div>
                       </div>
                       <div class="spollers_item">
-                        <div class="spollers_title" data-spoller>
+                        <div class="spollers_title icon-cheveron-down" data-spoller>
                           Have a question?
                         </div>
                         <div class="spollers_content">
@@ -274,6 +274,7 @@
           </div>
         </section>
       </div>
+      <a data-scroll href="#top" class="button-back icon-cheveron-outline-up"></a>
     </main>
     <footer class="footer">
   <div class="container"></div>

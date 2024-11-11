@@ -11094,6 +11094,9 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: 3.5
     }, someFunc);
   });
+  const scroll = new SmoothScroll('a[href*="#"]', {
+    header: '[data-scroll-header]'
+  });
   window.addEventListener('scroll', scroll_scroll);
   function scroll_scroll(e) {
     let src_value = pageYOffset;
@@ -11101,7 +11104,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let downBtn = document.querySelector('.button-back');
     if (downBtn !== null) {
       downBtn.addEventListener('click', () => {
-        let scr = new SmoothScroll('a[href="#top"]');
         e.preventDefault();
       });
       if (src_value > heightWindow && !downBtn.classList.contains('_show')) {
