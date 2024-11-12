@@ -55,6 +55,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "RAYDIS";
+  src: url("../fonts/../fonts/RAYDIS.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon.eot?34azm2");
   src: url("../fonts/icomoon.eot?34azm2#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?34azm2") format("truetype"), url("../fonts/icomoon.woff?34azm2") format("woff"), url("../fonts/icomoon.svg?34azm2#icomoon") format("svg");
@@ -158,6 +165,18 @@
 
 .icon-trophy:before {
   content: "\e914";
+}
+
+.icon-icons8-vk:before {
+  content: "\e915";
+}
+
+.icon-icons8-tg:before {
+  content: "\e916";
+}
+
+.icon-icons8-mail:before {
+  content: "\e917";
 }
 
 * {
@@ -1374,6 +1393,13 @@ textarea.input {
   color: white;
 }
 
+.section-title {
+  font-size: 37px;
+}
+.section-title:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -1382,6 +1408,7 @@ textarea.input {
   padding: 10px 0;
   z-index: 3;
   background-color: var(--gradient-background);
+  color: rgba(var(--color-foreground));
 }
 .header_line {
   display: -webkit-box;
@@ -1425,9 +1452,6 @@ textarea.input {
 .header_list-item:not(:last-child) {
   margin-right: 15px;
 }
-.header_list-link {
-  color: rgba(var(--color-foreground));
-}
 .header_contacts {
   margin-left: auto;
 }
@@ -1451,7 +1475,6 @@ textarea.input {
 }
 
 .header-phone {
-  color: white;
   font-size: 16px;
   font-weight: 600;
 }
@@ -1760,4 +1783,146 @@ textarea.input {
 }
 .spollers_content {
   padding: 20px 0;
+}
+
+.footer {
+  position: relative;
+  z-index: 2;
+  background-color: var(--gradient-background);
+  color: rgba(var(--color-foreground));
+}
+.footer_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 0 20px 0;
+}
+@media (max-width: 767.98px) {
+  .footer_body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+}
+@media (min-width: 767.98px) {
+  .footer_body {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer_left:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 767.98px) {
+  .footer_left:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.footer_rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer_logo {
+  margin-right: 15px;
+}
+.footer_company {
+  font-family: "RAYDIS";
+}
+.footer_contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.footer_contacts:not(:last-child) {
+  margin-bottom: 20px;
+}
+.footer_contacts-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+.footer_contacts-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer_contacts-item:hover {
+  opacity: 0.9;
+}
+.footer_contacts-item:hover .footer_icon {
+  color: red;
+}
+@media (min-width: 991.98px) {
+  .footer_contacts-item {
+    font-size: 16px;
+  }
+}
+.footer_icon {
+  margin-right: 10px;
+}
+.footer_icon.icon-icons8-mail {
+  font-size: 20px;
+}
+.footer_soc-item {
+  font-size: 30px;
+}
+.footer_soc-item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer_soc-item:hover {
+  color: #4C75A3;
+}
+
+.footer-logo {
+  display: block;
+  width: 40px;
+}
+.footer-logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+@media (min-width: 991.98px) {
+  .footer-logo {
+    width: 60px;
+  }
+}
+
+.photo-grid__items {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 767.98px) {
+  .photo-grid__items {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.photo-grid__item {
+  padding-bottom: 130%;
 }/*# sourceMappingURL=main.css.map */
