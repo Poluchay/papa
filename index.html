@@ -19,6 +19,9 @@
     <header class="header" data-scroll-header>
   <div class="container">
     <div class="header_line">
+      <button class="btn-reset burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="burger__line"></span>
+      </button>
       <div class="header_logo">
         <a href="#" class="header-logo">
           <picture>
@@ -27,19 +30,19 @@
           </picture>
         </a>
       </div>
-      <nav class="header_nav">
+      <nav class="header_nav" data-menu>
         <ul class="header_list">
           <li class="header_list-item">
-            <a href="#block-1" class="header_list-link">The Car Bar</a>
+            <a href="#block-1" class="header_list-link" data-menu-item>The Car Bar</a>
           </li>
           <li class="header_list-item">
-            <a href="#block-2" class="header_list-link">Merch</a>
+            <a href="#block-2" class="header_list-link" data-menu-item>Merch</a>
           </li>
           <li class="header_list-item">
-            <a href="#block-3" class="header_list-link">Reviews</a>
+            <a href="#block-3" class="header_list-link" data-menu-item>Reviews</a>
           </li>
           <li class="header_list-item">
-            <a href="#block-4" class="header_list-link">FAQ</a>
+            <a href="#block-4" class="header_list-link" data-menu-item>FAQ</a>
           </li>
         </ul>
       </nav>
@@ -50,6 +53,7 @@
   </div>
 </header>
     <main class="main">
+
       <!-- <picture>
         <source srcset="img/cover.webp" type="image/webp">
         <img loading="lazy" src="img/cover.jpg" class="image" width="300" height="300" alt="Обложка канала MaxGraph">
@@ -186,7 +190,7 @@
                           <option value="1">1</option>
                         </select>
                       </div>
-                      <button type="submit" class="form-message_item main-button main-button--black">Отправить</button>
+                      <button type="button" class="form-message_item main-button main-button--black"  data-graph-path="modal-1">Отправить</button>
                     </form>
                     <p>The all new Car Bar! Now fits a range of vehicles.</p>
                     <p>Ditch those burly camping tables and fiddly chairs for those quick pit stops and trips! Embrace the ease of The Car Bar, designed to be as quick and easy as possible to set up and take down.</p>
@@ -233,8 +237,8 @@
             <div class="in-marvel_cells cells">
               <div class="cells_item cells_item--img _ibg">
                 <picture>
-                  <source srcset="img/bg-first-block.webp" type="image/webp">
-                  <img loading="lazy" src="img/bg-first-block.webp" class="image" alt="Car">
+                  <source srcset="img/DSCF4170_49fc0903-f83d-4a93-9db4-87cf76dc9493.webp" type="image/webp">
+                  <img loading="lazy" src="img/DSCF4170_49fc0903-f83d-4a93-9db4-87cf76dc9493.webp" class="image" alt="Car">
                 </picture>
               </div>
               <div class="cells_item">
@@ -279,46 +283,46 @@
             <div class="photo-grid__items">
               <div class="photo-grid__item _ibg">
                 <picture>
-                  <source srcset="img/DSCF4149-Edit-Edit-3 (1).webp" type="image/webp">
-                  <img loading="lazy" src="img/DSCF4149-Edit-Edit-3 (1).webp" class="image" alt="Car">
+                  <source srcset="img/photo_2024-11-25_10-45-36.jpg" type="image/webp">
+                  <img loading="lazy" src="img/photo_2024-11-25_10-45-36.jpg" class="image" alt="Car">
                 </picture>
               </div>
               <div class="photo-grid__item _ibg">
                 <picture>
-                  <source srcset="img/DSCF4149-Edit-Edit-3 (1).webp" type="image/webp">
-                  <img loading="lazy" src="img/DSCF4149-Edit-Edit-3 (1).webp" class="image" alt="Car">
+                  <source srcset="img/photo_2024-11-25_10-47-16.jpg" type="image/webp">
+                  <img loading="lazy" src="img/photo_2024-11-25_10-47-16.jpg" class="image" alt="Car">
                 </picture>
               </div>
               <div class="photo-grid__item _ibg">
                 <picture>
-                  <source srcset="img/DSCF4149-Edit-Edit-3 (1).webp" type="image/webp">
-                  <img loading="lazy" src="img/DSCF4149-Edit-Edit-3 (1).webp" class="image" alt="Car">
+                  <source srcset="img/photo_2024-11-25_10-47-17.jpg" type="image/webp">
+                  <img loading="lazy" src="img/photo_2024-11-25_10-47-17.jpg" class="image" alt="Car">
                 </picture>
               </div>
               <div class="photo-grid__item _ibg">
                 <picture>
-                  <source srcset="img/DSCF4149-Edit-Edit-3 (1).webp" type="image/webp">
-                  <img loading="lazy" src="img/DSCF4149-Edit-Edit-3 (1).webp" class="image" alt="Car">
+                  <source srcset="img/photo_2024-11-25_10-47-18.jpg" type="image/webp">
+                  <img loading="lazy" src="img/photo_2024-11-25_10-47-18.jpg" class="image" alt="Car">
                 </picture>
               </div>
 
               <div class="photo-grid__item _ibg">
                 <picture>
-                  <source srcset="img/DSCF4149-Edit-Edit-3 (1).webp" type="image/webp">
-                  <img loading="lazy" src="img/DSCF4149-Edit-Edit-3 (1).webp" class="image" alt="Car">
+                  <source srcset="img/photo_2024-11-25_10-47-20.jpg" type="image/webp">
+                  <img loading="lazy" src="img/photo_2024-11-25_10-47-20.jpg" class="image" alt="Car">
                 </picture>
               </div>
 
                <div class="photo-grid__item _ibg">
                 <picture>
-                  <source srcset="img/DSCF4149-Edit-Edit-3 (1).webp" type="image/webp">
-                  <img loading="lazy" src="img/DSCF4149-Edit-Edit-3 (1).webp" class="image" alt="Car">
+                  <source srcset="img/photo_2024-11-25_10-47-21.jpg" type="image/webp">
+                  <img loading="lazy" src="img/photo_2024-11-25_10-47-21.jpg" class="image" alt="Car">
                 </picture>
               </div>
               <div class="photo-grid__item _ibg">
                 <picture>
-                  <source srcset="img/DSCF4149-Edit-Edit-3 (1).webp" type="image/webp">
-                  <img loading="lazy" src="img/DSCF4149-Edit-Edit-3 (1).webp" class="image" alt="Car">
+                  <source srcset="img/photo_2024-11-25_10-47-22.jpg" type="image/webp">
+                  <img loading="lazy" src="img/photo_2024-11-25_10-47-22.jpg" class="image" alt="Car">
                 </picture>
               </div>
             </div>
@@ -328,6 +332,12 @@
       </div>
       <a data-scroll href="#top" class="button-back icon-cheveron-outline-up"></a>
     </main>
+    <div class="graph-modal">
+      <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="modal-1">
+        <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+        <div class="graph-modal__content"></div>
+      </div>
+    </div>
     <footer class="footer">
   <div class="footer_container container">
     <div class="footer_body">
