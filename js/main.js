@@ -11368,6 +11368,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
 /* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
 
+// import jquery from 'jquery';
 
 
 
@@ -11394,64 +11395,191 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //  });
 
-  window.addEventListener('DOMContentLoaded', () => {
-    const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
-      let swiper;
-      breakpoint = window.matchMedia(breakpoint);
-      const enableSwiper = function (className, settings) {
-        swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](className, settings);
-        if (callback) {
-          callback(swiper);
+  let cars = {
+    "Audi": {
+      "name": "Audi",
+      "models": {
+        "Q6": {
+          "name": "Q6",
+          "year": {
+            "1996": {
+              "name": "1996",
+              "table": "false"
+            },
+            "1995": {
+              "name": "1995",
+              "table": "true"
+            }
+          }
+        },
+        "Q5": {
+          "name": "Q5",
+          "year": {
+            "1995": {
+              "name": "1995",
+              "table": "true"
+            },
+            "1996": {
+              "name": "1996",
+              "table": "false"
+            }
+          }
         }
-      };
-      const checker = function () {
-        if (breakpoint.matches) {
-          return enableSwiper(swiperClass, swiperSettings);
-        } else {
-          if (swiper !== undefined) swiper.destroy(true, true);
-          return;
+      }
+    },
+    "Ford": {
+      "name": "Ford",
+      "models": {
+        "Q6": {
+          "name": "Q6",
+          "year": {
+            "1996": {
+              "name": "1996",
+              "table": "false"
+            },
+            "1995": {
+              "name": "1995",
+              "table": "true"
+            }
+          }
+        },
+        "Q5": {
+          "name": "Q5",
+          "year": {
+            "1995": {
+              "name": "1995",
+              "table": "true"
+            },
+            "1996": {
+              "name": "1996",
+              "table": "false"
+            }
+          }
         }
-      };
-      breakpoint.addEventListener('change', checker);
-      checker();
-    };
-    const someFunc = instance => {
-      if (instance) {
-        instance.on('slideChange', function (e) {
-          console.log('*** mySwiper.activeIndex', instance.activeIndex);
-        });
-      }
-    };
-    resizableSwiper('(max-width: 992px)', '.slider_pagination', {
-      loop: false,
-      spaceBetween: 10,
-      slidesPerView: 3.5
-    }, someFunc);
-  });
-  const scroll = new SmoothScroll('a[href*="#"]', {
-    header: '[data-scroll-header]'
-  });
-  window.addEventListener('scroll', scroll_scroll);
-  function scroll_scroll(e) {
-    let src_value = pageYOffset;
-    let heightWindow = window.innerHeight;
-    let downBtn = document.querySelector('.button-back');
-    if (downBtn !== null) {
-      downBtn.addEventListener('click', () => {
-        e.preventDefault();
-      });
-      if (src_value > heightWindow && !downBtn.classList.contains('_show')) {
-        downBtn.classList.add('_show');
-      }
-      if (src_value < heightWindow && downBtn.classList.contains('_show')) {
-        downBtn.classList.remove('_show');
       }
     }
+  };
+  let selectCars = document.querySelector('#select-cars');
+  let selectModels = document.querySelector('#select-models');
+  let selectYears = document.querySelector('#select-years');
+  for (let i in cars) {
+    const option = document.createElement('option');
+    selectCars.append(option);
+    option.textContent = option.value = cars[i].name;
   }
-  setTimeout(function () {
-    document.addEventListener("DOMContentLoaded", scroll_scroll);
-  }, 100);
+  selectCars.addEventListener('change', function () {
+    if (document.querySelector('#form-message._show')) {
+      document.querySelector('#form-message').classList.remove('_show');
+    }
+    if (selectCars.selectedIndex != 0) {
+      let optionSelect = selectModels.querySelectorAll('option');
+      for (let optionIndex = 1; optionIndex < optionSelect.length; optionIndex++) {
+        optionSelect[optionIndex].remove();
+      }
+      optionSelect = selectYears.querySelectorAll('option');
+      for (let optionIndex = 1; optionIndex < optionSelect.length; optionIndex++) {
+        optionSelect[optionIndex].remove();
+      }
+      for (let j in cars[this.value].models) {
+        const option = document.createElement('option');
+        selectModels.append(option);
+        option.textContent = option.value = cars[this.value].models[j].name;
+      }
+    } else {
+      let optionSelect = selectModels.querySelectorAll('option');
+      for (let optionIndex = 1; optionIndex < optionSelect.length; optionIndex++) {
+        optionSelect[optionIndex].remove();
+      }
+      optionSelect = selectYears.querySelectorAll('option');
+      for (let optionIndex = 1; optionIndex < optionSelect.length; optionIndex++) {
+        optionSelect[optionIndex].remove();
+      }
+    }
+  });
+  selectModels.addEventListener('change', function () {
+    if (document.querySelector('#form-message._show')) {
+      document.querySelector('#form-message').classList.remove('_show');
+    }
+    let optionSelect = selectYears.querySelectorAll('option');
+    for (let optionIndex = 1; optionIndex < optionSelect.length; optionIndex++) {
+      optionSelect[optionIndex].remove();
+    }
+    if (selectModels.selectedIndex != 0) {
+      for (let q in cars[selectCars.value].models[this.value].year) {
+        const option = document.createElement('option');
+        selectYears.append(option);
+        option.textContent = option.value = cars[selectCars.value].models[this.value].year[q].name;
+      }
+    } else {
+      let optionSelect = selectYears.querySelectorAll('option');
+      for (let optionIndex = 1; optionIndex < optionSelect.length; optionIndex++) {
+        optionSelect[optionIndex].remove();
+      }
+    }
+  });
+  selectYears.addEventListener('change', function () {
+    if (selectYears.selectedIndex != 0 && cars[selectCars.value].models[selectModels.value].year[this.value].table == "true") {
+      document.querySelector('#form-message').classList.add('_show');
+    } else if (selectYears.selectedIndex == 0 && document.querySelector('#form-message._show') || selectYears.selectedIndex != 0 && cars[selectCars.value].models[selectModels.value].year[this.value].table == "false" && document.querySelector('#form-message._show')) {
+      document.querySelector('#form-message').classList.remove('_show');
+    }
+  });
+  const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
+    let swiper;
+    breakpoint = window.matchMedia(breakpoint);
+    const enableSwiper = function (className, settings) {
+      swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](className, settings);
+      if (callback) {
+        callback(swiper);
+      }
+    };
+    const checker = function () {
+      if (breakpoint.matches) {
+        return enableSwiper(swiperClass, swiperSettings);
+      } else {
+        if (swiper !== undefined) swiper.destroy(true, true);
+        return;
+      }
+    };
+    breakpoint.addEventListener('change', checker);
+    checker();
+  };
+  const someFunc = instance => {
+    if (instance) {
+      instance.on('slideChange', function (e) {
+        console.log('*** mySwiper.activeIndex', instance.activeIndex);
+      });
+    }
+  };
+  resizableSwiper('(max-width: 992px)', '.slider_pagination', {
+    loop: false,
+    spaceBetween: 10,
+    slidesPerView: 3.5
+  }, someFunc);
 });
+const scroll = new SmoothScroll('a[href*="#"]', {
+  header: '[data-scroll-header]'
+});
+window.addEventListener('scroll', scroll_scroll);
+function scroll_scroll(e) {
+  let src_value = pageYOffset;
+  let heightWindow = window.innerHeight;
+  let downBtn = document.querySelector('.button-back');
+  if (downBtn !== null) {
+    downBtn.addEventListener('click', () => {
+      e.preventDefault();
+    });
+    if (src_value > heightWindow && !downBtn.classList.contains('_show')) {
+      downBtn.classList.add('_show');
+    }
+    if (src_value < heightWindow && downBtn.classList.contains('_show')) {
+      downBtn.classList.remove('_show');
+    }
+  }
+}
+setTimeout(function () {
+  document.addEventListener("DOMContentLoaded", scroll_scroll);
+}, 100);
 /******/ })()
 ;
 //# sourceMappingURL=main.js.map
